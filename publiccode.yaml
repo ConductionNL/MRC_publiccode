@@ -1,0 +1,41 @@
+publiccodeYmlVersion: "0.1"
+
+name: "Medewerkerscatalogus"
+url: "https://github.com/ConductionNL/medewerkercatalogus/blob/master/api/public/schema/openapi.yaml"
+releaseDate: "2020-04-21"
+
+softwareType: configurationFiles
+
+inputTypes:
+  - application/json
+  - application/xml
+
+outputTypes:
+  - application/json
+  - application/ld+json
+  - text/csv
+  - text/html
+
+platforms:
+  - web
+  
+categories:
+  - collaboration
+  - it-development
+  
+developmentStatus: beta
+
+description:
+  nl:
+    shortDescription: "Een API voor het registreren, bewerken en opvragen van medewerkers."
+    documentation: 'https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml'
+    apiDocumentation: 'https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml'
+  en:
+    shortDescription: "An API to maintain employees"
+    documentation: 'https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml'
+    apiDocumentation: 'https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml'
+
+dependsOn:
+  open:
+    - name: common-gateway
+      versionMin: 1.0.0
