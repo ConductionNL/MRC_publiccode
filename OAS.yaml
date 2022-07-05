@@ -1,0 +1,281 @@
+openapi: 3.1.0
+x-stoplight:
+  id: 8lguuxplmx69d
+info:
+  title: MedewerkersAPI
+  version: '1.0'
+servers:
+  - url: 'http://localhost/api'
+paths:
+  /employees:
+    get:
+      summary: GET employees
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Employee'
+      operationId: get-employees
+      description: 'All properties that the entity Employee holds. An Employee is a human with goals, skills and/or interests.'
+    post:
+      summary: POST employee
+      operationId: post-employees
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+      description: 'All properties that the entity Employee holds. An Employee is a human with goals, skills and/or interests.'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Employee'
+  '/employees/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: GET employee
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+      operationId: get-employees-id
+      description: 'All properties that the entity Employee holds. An Employee is a human with goals, skills and/or interests.'
+    put:
+      summary: PUT employee
+      operationId: put-employees-id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+      description: 'All properties that the entity Employee holds. An Employee is a human with goals, skills and/or interests.'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Employee'
+    delete:
+      summary: DELETE employee
+      operationId: delete-employees-id
+      responses:
+        '200':
+          description: OK
+      description: 'All properties that the entity Employee holds. An Employee is a human with goals, skills and/or interests.'
+  /job_functions:
+    get:
+      summary: GET job functions
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JobFunction'
+      operationId: get-jobFunctions
+    post:
+      summary: POST job function
+      operationId: post-jobFunctions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobFunction'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobFunction'
+    parameters: []
+  '/job_functions/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: GET job function
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobFunction'
+      operationId: get-job_functions-id
+    put:
+      summary: PUT job function
+      operationId: put-job_functions-id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobFunction'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobFunction'
+    delete:
+      summary: DELETE job function
+      operationId: delete-job_functions-id
+      responses:
+        '200':
+          description: OK
+  /educations:
+    get:
+      summary: GET educations
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Education'
+      operationId: get-educations
+    post:
+      summary: POST education
+      operationId: post-educations
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Education'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Education'
+  '/educations/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: GET education
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Education'
+      operationId: get-educations-id
+    put:
+      summary: PUT education
+      operationId: put-educations-id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Education'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Education'
+    delete:
+      summary: DELETE education
+      operationId: delete-educations-id
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    Employee:
+      title: Employee
+      x-stoplight:
+        id: 9wfk0nep3l915
+      type: object
+      description: 'All properties that the entity Employee holds. An Employee is a human with goals, skills and/or interests.'
+      properties:
+        person:
+          type: string
+          description: The person that is employed
+        organization:
+          type: string
+          description: The organisation where this person is employed
+        jobFunctions:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobFunction'
+        educations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Education'
+    Education:
+      title: Education
+      x-stoplight:
+        id: telvjlcxcs8fm
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        endDate:
+          type: string
+          format: date-time
+        institution:
+          type: string
+        degreeGrantedStatus:
+          type: string
+          enum:
+            - Granted
+            - notGranted
+        iscedEducationLevelCode:
+          type: string
+      required:
+        - name
+    JobFunction:
+      title: JobFunction
+      x-stoplight:
+        id: 577ow9rrp0nf9
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        esco:
+          type: string
+      required:
+        - name
+        - description
