@@ -28,12 +28,12 @@ developmentStatus: beta
 description:
   nl:
     shortDescription: "Een API voor het registreren, bewerken en opvragen van medewerkers."
-    documentation: 'https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml'
-    apiDocumentation: 'https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml'
+    documentation: 'https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/MRC_publiccode/main/OAS.yaml'
+    apiDocumentation: 'https://raw.githubusercontent.com/ConductionNL/MRC_publiccode/main/OAS.yaml'
   en:
     shortDescription: "An API to maintain employees"
-    documentation: 'https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml'
-    apiDocumentation: 'https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml'
+    documentation: 'https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/MRC_publiccode/main/OAS.yaml'
+    apiDocumentation: 'https://raw.githubusercontent.com/ConductionNL/MRC_publiccode/main/OAS.yaml'
 
 dependsOn:
   open:
