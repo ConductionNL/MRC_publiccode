@@ -1,7 +1,7 @@
 publiccodeYmlVersion: "0.1"
 
 name: "Medewerkerscatalogus"
-url: "https://github.com/ConductionNL/medewerkercatalogus/blob/master/api/public/schema/openapi.yaml"
+url: "https://raw.githubusercontent.com/ConductionNL/MRC_publiccode/main/OAS.yaml"
 releaseDate: "2020-04-21"
 
 softwareType: configurationFiles
