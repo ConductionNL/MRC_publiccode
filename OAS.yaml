@@ -217,6 +217,210 @@ paths:
       responses:
         '200':
           description: OK
+  /skills:
+    get:
+      summary: GET skills
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Skill'
+      operationId: get-skills
+    post:
+      summary: POST skill
+      operationId: post-skills
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Skill'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Skill'
+  '/skills/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: GET skill
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Skill'
+      operationId: get-skills-id
+    put:
+      summary: PUT skill
+      operationId: put-skills-id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Skill'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Skill'
+    delete:
+      summary: DELETE skill
+      operationId: delete-skills-id
+      responses:
+        '200':
+          description: OK
+  /interests:
+    get:
+      summary: GET interests
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Interest'
+      operationId: get-interests
+    post:
+      summary: POST interest
+      operationId: post-interests
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Interest'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Interest'
+  '/interests/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: GET interest
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Interest'
+      operationId: get-interests-id
+    put:
+      summary: PUT interest
+      operationId: put-interests-id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Interest'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Interest'
+    delete:
+      summary: DELETE interest
+      operationId: delete-interests-id
+      responses:
+        '200':
+          description: OK
+  /competencies:
+    get:
+      summary: GET competencies
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Competence'
+      operationId: get-competencies
+    post:
+      summary: POST competence
+      operationId: post-competencies
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Competence'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Competence'
+  '/competencies/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: GET competence
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Competence'
+      operationId: get-competencies-id
+    put:
+      summary: PUT competence
+      operationId: put-competencies-id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Competence'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Competence'
+    delete:
+      summary: DELETE competence
+      operationId: delete-competencies-id
+      responses:
+        '200':
+          description: OK
 components:
   schemas:
     Employee:
