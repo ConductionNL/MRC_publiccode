@@ -240,6 +240,18 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Education'
+        skills:
+          type: array
+          items:
+            $ref: '#/components/schemas/Skill'
+        interests:
+          type: array
+          items:
+            $ref: '#/components/schemas/Interest'
+        competencies:
+          type: array
+          items:
+            $ref: '#/components/schemas/Competence'
     Education:
       title: Education
       x-stoplight:
@@ -279,3 +291,54 @@ components:
       required:
         - name
         - description
+    Skill:
+      title: Skill
+      x-stoplight:
+        id: q6lrxcf4bm7l1
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        level:
+          type: string
+          enum:
+            - beginner
+            - intermediate
+            - advanced
+        esco:
+          type: string
+      required:
+        - name
+        - description
+        - level
+      examples:
+        - name: string
+          description: string
+          level: beginner
+          esco: string
+    Interest:
+      title: Interest
+      x-stoplight:
+        id: 20ajnz3jd2lkc
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        grade:
+          type: string
+      required:
+        - name
+        - description
+        - grade
+    Competence:
+      title: Competency
+      x-stoplight:
+        id: i5o8vvqfox7ql
+      type: object
+      properties:
+        id:
+          type: string
