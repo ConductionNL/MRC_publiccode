@@ -10,7 +10,8 @@ paths:
   /employees:
     get:
       summary: GET employees
-      tags: []
+      tags:
+        - Employee
       responses:
         '200':
           description: OK
@@ -38,6 +39,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/Employee'
+      tags:
+        - Employee
   '/employees/{id}':
     parameters:
       - schema:
@@ -532,17 +535,22 @@ components:
           type: string
         description:
           type: string
-        grade:
-          type: string
       required:
         - name
         - description
-        - grade
     Competence:
       title: Competency
       x-stoplight:
         id: i5o8vvqfox7ql
       type: object
       properties:
-        id:
+        name:
           type: string
+        description:
+          type: string
+        grade:
+          type: string
+      required:
+        - name
+        - description
+        - grade
